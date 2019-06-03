@@ -1,0 +1,18 @@
+Package: VaDA
+Type: Package
+Title: Variational Discriminant Analysis
+Version: 0.1.0
+Author: Weichang Yu
+Maintainer: Weichang Yu <w.yu@maths.usyd.edu.au>
+Description: Fits the variational discriminant analysis models
+    VLDA, VQDA and VNPDA
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    Rcpp,
+    ggplot2,
+    RcppAlgos,
+    RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo, ggplot2
+RoxygenNote: 6.1.1

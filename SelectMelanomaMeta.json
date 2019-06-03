@@ -1,0 +1,13 @@
+{
+  "file": "https://raw.githubusercontent.com/weichangyu10/VaDA/master/SelectedGenes.csv",
+  "name": "VNPDAselectedGenesMelanoma",
+  "header": 0,
+  "separator": ",",
+  "skip": 0,
+  "meta": [
+    { "type": "id", "index": 0, "name": "GeneName" }
+ ],
+  "sets": [
+    {"format": "binary", "start": 1, "end": 6}
+  ]
+}
