@@ -127,9 +127,9 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// MULTtwoSampTestPredCpp
-List MULTtwoSampTestPredCpp(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& Xtest, const arma::vec& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth);
-RcppExport SEXP _VaDA_MULTtwoSampTestPredCpp(SEXP xtrainSEXP, SEXP ytrainSEXP, SEXP XtestSEXP, SEXP cvalSEXP, SEXP aySEXP, SEXP bySEXP, SEXP agSEXP, SEXP bgSEXP, SEXP maxdepthSEXP) {
+// VNPDA
+List VNPDA(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& Xtest, const arma::vec& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth);
+RcppExport SEXP _VaDA_VNPDA(SEXP xtrainSEXP, SEXP ytrainSEXP, SEXP XtestSEXP, SEXP cvalSEXP, SEXP aySEXP, SEXP bySEXP, SEXP agSEXP, SEXP bgSEXP, SEXP maxdepthSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -142,7 +142,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const double& >::type ag(agSEXP);
     Rcpp::traits::input_parameter< const double& >::type bg(bgSEXP);
     Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
-    rcpp_result_gen = Rcpp::wrap(MULTtwoSampTestPredCpp(xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth));
+    rcpp_result_gen = Rcpp::wrap(VNPDA(xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -275,7 +275,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_VaDA_DividePredCpp", (DL_FUNC) &_VaDA_DividePredCpp, 10},
     {"_VaDA_PredCpp", (DL_FUNC) &_VaDA_PredCpp, 8},
     {"_VaDA_TREECpp", (DL_FUNC) &_VaDA_TREECpp, 9},
-    {"_VaDA_MULTtwoSampTestPredCpp", (DL_FUNC) &_VaDA_MULTtwoSampTestPredCpp, 9},
+    {"_VaDA_VNPDA", (DL_FUNC) &_VaDA_VNPDA, 9},
     {"_VaDA_PerturbCpp", (DL_FUNC) &_VaDA_PerturbCpp, 1},
     {"_VaDA_ArmaSample", (DL_FUNC) &_VaDA_ArmaSample, 3},
     {"_VaDA_SampleMixNorm", (DL_FUNC) &_VaDA_SampleMixNorm, 6},

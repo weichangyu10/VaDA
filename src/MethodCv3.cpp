@@ -420,7 +420,7 @@ double TREECpp(const arma::vec& x1, const arma::vec& x0, const double& cval, con
 //' @rawNamespace useDynLib(VaDA)
 //'
 // [[Rcpp::export]]
-List MULTtwoSampTestPredCpp(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& Xtest, const arma::vec& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth = 10) {
+List VNPDA(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& Xtest, const arma::vec& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth = 10) {
 
   const int P = xtrain.n_cols;
   const uvec x1inds = find(ytrain == 1);

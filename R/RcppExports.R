@@ -204,8 +204,8 @@ TREECpp <- function(x1, x0, cval, m, s, DOWN, UP, depth, maxdepth = 10L) {
 #' @export
 #' @rawNamespace useDynLib(VaDA)
 #'
-MULTtwoSampTestPredCpp <- function(xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth = 10L) {
-    .Call('_VaDA_MULTtwoSampTestPredCpp', PACKAGE = 'VaDA', xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth)
+VNPDA <- function(xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth = 10L) {
+    .Call('_VaDA_VNPDA', PACKAGE = 'VaDA', xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth)
 }
 
 #' @title Introduces random perturbation to a set of variables
