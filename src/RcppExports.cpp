@@ -70,6 +70,201 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// DividePredCpp
+double DividePredCpp(const arma::vec& x1, const arma::vec& x0, const double& xnew, const double& cval, const double& m, const double& s, const double& DOWN, const double& UP, const int& depth, const int& maxdepth);
+RcppExport SEXP _VaDA_DividePredCpp(SEXP x1SEXP, SEXP x0SEXP, SEXP xnewSEXP, SEXP cvalSEXP, SEXP mSEXP, SEXP sSEXP, SEXP DOWNSEXP, SEXP UPSEXP, SEXP depthSEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type x1(x1SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< const double& >::type xnew(xnewSEXP);
+    Rcpp::traits::input_parameter< const double& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const double& >::type m(mSEXP);
+    Rcpp::traits::input_parameter< const double& >::type s(sSEXP);
+    Rcpp::traits::input_parameter< const double& >::type DOWN(DOWNSEXP);
+    Rcpp::traits::input_parameter< const double& >::type UP(UPSEXP);
+    Rcpp::traits::input_parameter< const int& >::type depth(depthSEXP);
+    Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(DividePredCpp(x1, x0, xnew, cval, m, s, DOWN, UP, depth, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// PredCpp
+double PredCpp(arma::mat xtrain1, arma::mat xtrain0, arma::vec xtest, const arma::vec& cval, arma::vec omega, double ay, double by, int maxdepth);
+RcppExport SEXP _VaDA_PredCpp(SEXP xtrain1SEXP, SEXP xtrain0SEXP, SEXP xtestSEXP, SEXP cvalSEXP, SEXP omegaSEXP, SEXP aySEXP, SEXP bySEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type xtrain1(xtrain1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type xtrain0(xtrain0SEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type xtest(xtestSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type omega(omegaSEXP);
+    Rcpp::traits::input_parameter< double >::type ay(aySEXP);
+    Rcpp::traits::input_parameter< double >::type by(bySEXP);
+    Rcpp::traits::input_parameter< int >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(PredCpp(xtrain1, xtrain0, xtest, cval, omega, ay, by, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// TREECpp
+double TREECpp(const arma::vec& x1, const arma::vec& x0, const double& cval, const double& m, const double& s, const double& DOWN, const double& UP, const int& depth, const int& maxdepth);
+RcppExport SEXP _VaDA_TREECpp(SEXP x1SEXP, SEXP x0SEXP, SEXP cvalSEXP, SEXP mSEXP, SEXP sSEXP, SEXP DOWNSEXP, SEXP UPSEXP, SEXP depthSEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type x1(x1SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< const double& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const double& >::type m(mSEXP);
+    Rcpp::traits::input_parameter< const double& >::type s(sSEXP);
+    Rcpp::traits::input_parameter< const double& >::type DOWN(DOWNSEXP);
+    Rcpp::traits::input_parameter< const double& >::type UP(UPSEXP);
+    Rcpp::traits::input_parameter< const int& >::type depth(depthSEXP);
+    Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(TREECpp(x1, x0, cval, m, s, DOWN, UP, depth, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// MULTtwoSampTestPredCpp
+List MULTtwoSampTestPredCpp(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& Xtest, const arma::vec& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth);
+RcppExport SEXP _VaDA_MULTtwoSampTestPredCpp(SEXP xtrainSEXP, SEXP ytrainSEXP, SEXP XtestSEXP, SEXP cvalSEXP, SEXP aySEXP, SEXP bySEXP, SEXP agSEXP, SEXP bgSEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type xtrain(xtrainSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type ytrain(ytrainSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Xtest(XtestSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const double& >::type ay(aySEXP);
+    Rcpp::traits::input_parameter< const double& >::type by(bySEXP);
+    Rcpp::traits::input_parameter< const double& >::type ag(agSEXP);
+    Rcpp::traits::input_parameter< const double& >::type bg(bgSEXP);
+    Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(MULTtwoSampTestPredCpp(xtrain, ytrain, Xtest, cval, ay, by, ag, bg, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// PerturbCpp
+arma::mat PerturbCpp(arma::mat Z);
+RcppExport SEXP _VaDA_PerturbCpp(SEXP ZSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type Z(ZSEXP);
+    rcpp_result_gen = Rcpp::wrap(PerturbCpp(Z));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ArmaSample
+arma::vec ArmaSample(const arma::vec& x, const int& numObs, const arma::vec& weights);
+RcppExport SEXP _VaDA_ArmaSample(SEXP xSEXP, SEXP numObsSEXP, SEXP weightsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const int& >::type numObs(numObsSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type weights(weightsSEXP);
+    rcpp_result_gen = Rcpp::wrap(ArmaSample(x, numObs, weights));
+    return rcpp_result_gen;
+END_RCPP
+}
+// SampleMixNorm
+arma::mat SampleMixNorm(const int& N, const int& p, const arma::vec indices, const arma::vec weights, const arma::vec meanVec, const arma::vec sdVec);
+RcppExport SEXP _VaDA_SampleMixNorm(SEXP NSEXP, SEXP pSEXP, SEXP indicesSEXP, SEXP weightsSEXP, SEXP meanVecSEXP, SEXP sdVecSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int& >::type N(NSEXP);
+    Rcpp::traits::input_parameter< const int& >::type p(pSEXP);
+    Rcpp::traits::input_parameter< const arma::vec >::type indices(indicesSEXP);
+    Rcpp::traits::input_parameter< const arma::vec >::type weights(weightsSEXP);
+    Rcpp::traits::input_parameter< const arma::vec >::type meanVec(meanVecSEXP);
+    Rcpp::traits::input_parameter< const arma::vec >::type sdVec(sdVecSEXP);
+    rcpp_result_gen = Rcpp::wrap(SampleMixNorm(N, p, indices, weights, meanVec, sdVec));
+    return rcpp_result_gen;
+END_RCPP
+}
+// simpleKS
+double simpleKS(arma::colvec x, arma::colvec y);
+RcppExport SEXP _VaDA_simpleKS(SEXP xSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::colvec >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(simpleKS(x, y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// KSmatrix
+arma::vec KSmatrix(arma::mat X, arma::colvec y);
+RcppExport SEXP _VaDA_KSmatrix(SEXP XSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type X(XSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(KSmatrix(X, y));
+    return rcpp_result_gen;
+END_RCPP
+}
+// TREECppCVselect
+arma::vec TREECppCVselect(const arma::vec& x1, const arma::vec& x0, const arma::vec& cval, const double& m, const double& s, const double& DOWN, const double& UP, const int& depth, const int& maxdepth);
+RcppExport SEXP _VaDA_TREECppCVselect(SEXP x1SEXP, SEXP x0SEXP, SEXP cvalSEXP, SEXP mSEXP, SEXP sSEXP, SEXP DOWNSEXP, SEXP UPSEXP, SEXP depthSEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type x1(x1SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const double& >::type m(mSEXP);
+    Rcpp::traits::input_parameter< const double& >::type s(sSEXP);
+    Rcpp::traits::input_parameter< const double& >::type DOWN(DOWNSEXP);
+    Rcpp::traits::input_parameter< const double& >::type UP(UPSEXP);
+    Rcpp::traits::input_parameter< const int& >::type depth(depthSEXP);
+    Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(TREECppCVselect(x1, x0, cval, m, s, DOWN, UP, depth, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// PredCppCVselect
+arma::vec PredCppCVselect(arma::mat xtrain1, arma::mat xtrain0, arma::vec xtest, const arma::mat& cval, const arma::mat& omega, double ay, double by, int maxdepth);
+RcppExport SEXP _VaDA_PredCppCVselect(SEXP xtrain1SEXP, SEXP xtrain0SEXP, SEXP xtestSEXP, SEXP cvalSEXP, SEXP omegaSEXP, SEXP aySEXP, SEXP bySEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type xtrain1(xtrain1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type xtrain0(xtrain0SEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type xtest(xtestSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type omega(omegaSEXP);
+    Rcpp::traits::input_parameter< double >::type ay(aySEXP);
+    Rcpp::traits::input_parameter< double >::type by(bySEXP);
+    Rcpp::traits::input_parameter< int >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(PredCppCVselect(xtrain1, xtrain0, xtest, cval, omega, ay, by, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CVselectC
+List CVselectC(const arma::mat& xtrain, const arma::vec& ytrain, const arma::mat& cval, const double& ay, const double& by, const double& ag, const double& bg, const int& maxdepth);
+RcppExport SEXP _VaDA_CVselectC(SEXP xtrainSEXP, SEXP ytrainSEXP, SEXP cvalSEXP, SEXP aySEXP, SEXP bySEXP, SEXP agSEXP, SEXP bgSEXP, SEXP maxdepthSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type xtrain(xtrainSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type ytrain(ytrainSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type cval(cvalSEXP);
+    Rcpp::traits::input_parameter< const double& >::type ay(aySEXP);
+    Rcpp::traits::input_parameter< const double& >::type by(bySEXP);
+    Rcpp::traits::input_parameter< const double& >::type ag(agSEXP);
+    Rcpp::traits::input_parameter< const double& >::type bg(bgSEXP);
+    Rcpp::traits::input_parameter< const int& >::type maxdepth(maxdepthSEXP);
+    rcpp_result_gen = Rcpp::wrap(CVselectC(xtrain, ytrain, cval, ay, by, ag, bg, maxdepth));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_VaDA_arma_setdiff", (DL_FUNC) &_VaDA_arma_setdiff, 2},
@@ -77,6 +272,18 @@ static const R_CallMethodDef CallEntries[] = {
     {"_VaDA_epsilonC", (DL_FUNC) &_VaDA_epsilonC, 1},
     {"_VaDA_VLDA", (DL_FUNC) &_VaDA_VLDA, 5},
     {"_VaDA_VQDA", (DL_FUNC) &_VaDA_VQDA, 5},
+    {"_VaDA_DividePredCpp", (DL_FUNC) &_VaDA_DividePredCpp, 10},
+    {"_VaDA_PredCpp", (DL_FUNC) &_VaDA_PredCpp, 8},
+    {"_VaDA_TREECpp", (DL_FUNC) &_VaDA_TREECpp, 9},
+    {"_VaDA_MULTtwoSampTestPredCpp", (DL_FUNC) &_VaDA_MULTtwoSampTestPredCpp, 9},
+    {"_VaDA_PerturbCpp", (DL_FUNC) &_VaDA_PerturbCpp, 1},
+    {"_VaDA_ArmaSample", (DL_FUNC) &_VaDA_ArmaSample, 3},
+    {"_VaDA_SampleMixNorm", (DL_FUNC) &_VaDA_SampleMixNorm, 6},
+    {"_VaDA_simpleKS", (DL_FUNC) &_VaDA_simpleKS, 2},
+    {"_VaDA_KSmatrix", (DL_FUNC) &_VaDA_KSmatrix, 2},
+    {"_VaDA_TREECppCVselect", (DL_FUNC) &_VaDA_TREECppCVselect, 9},
+    {"_VaDA_PredCppCVselect", (DL_FUNC) &_VaDA_PredCppCVselect, 8},
+    {"_VaDA_CVselectC", (DL_FUNC) &_VaDA_CVselectC, 8},
     {NULL, NULL, 0}
 };
 
